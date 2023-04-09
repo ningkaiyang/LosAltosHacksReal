@@ -1,0 +1,42 @@
+.upper {
+    top: 0;
+    background-color: #c8966a;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+.col-2{
+  padding: 0px !important ; 
+  width: 10% !important;
+  height: 10% !important;
+}
+
+.row{
+  overflow: visible !important;
+  height: 13% !important;
+
+}
+
+body{
+  background-color: #c5e47c !important;
+}  
+
+#task-list{
+  list-style-type: none;
+}
+
+li {
+  background-image: url('assets/UncheckedBox.png');
+  background-repeat: no-repeat;
+  background-size: 16px 16px; /* adjust to the size of your icon */
+  background-position: 0 50%; /* adjust the position of the icon */
+  padding-left: 20px; /* add some padding to make room for the icon */
+}
+
+h1{
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
