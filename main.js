@@ -1,9 +1,6 @@
-function initialize(){
-    var numtask = prompt("How many tasks do you have today?");
-    var tasks = new Array();
-    var completecount = 0; 
-}
-setTimeout(initialize(), 5000);
+var numtask = prompt("How many tasks do you have today?");
+var tasks = new Array();
+var completecount = 0; 
 
 
 
