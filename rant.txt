@@ -1,0 +1,23 @@
+SO! ;-;
+IT TURNS OUT THAT JAVASCRIPT IS A SINGLE CORE OR SOMETHING DUMB LANGUAGE SO BASICALLY IT CANNOT RUN MULTIPLE TIMERS/INTERVALS IN SEQUENCE
+WHICH IS WHAT WAS MAKING ALL OF OUR GIFS BREAK, AND ALSO MAKING THE LOOP INSTANT RUN AFTER A BUILD (because mid build, an interval is already happening and so the setTimer for the loop didn't work and instant runs, and all of the subsequent flashy animations broke as well.)
+
+TO FIX THIS!
+1. Realize that JavaScript is bad with help of fellow "goofy aah" friend and realize that your interval and timer approach will never work
+2. Try JS animationFrame thingy but it also doesn't work
+3. A stroke of genius (actually mediocre intelligence just like nerfed cause 4am) to translate the old 2 frame glitter animations into .Gif files through online conversion and time it there instead of using JS which is not possible basically
+4. Get the glitter GIFs working but the actual loop still runs too fast and misses 1 house, plus glitches out pretty often
+5. Realize that in 99% of cases (except for the animation of building) we DONT NEED intervals/timers and instead we can just sequence it in the code manually!
+   So like... in this case, it's just basic, putting the check() and win() AFTER the house is fully built and stopAnimation() is called! IT WAS THAT EASY!
+   So I copied 3 of the check() and win() conditions, and removed the one that tried to run alongside housebuilding with a delay timer which didn't work cause housebuilding animation took the timer and made the loop run instantly. (JS is so bad)
+   After everything was properly sequenced (no way at all for the check to run while house was still building) EVERYTHING WORKED!
+   So Crazy
+
+6. Fix a few other random bugs along the way but like wow what an experience
+    Duplicate completecount++s
+    Put them in the right place
+    Mistyped GIF paths breh
+    Simplify like everything cause idk it was so complex and so useless
+
+7. Enjoy making slideshow at 4:30 am :D
+
