@@ -1,6 +1,6 @@
 var numtask = prompt("How many tasks do you have today?");
 var tasks = new Array();
-var completecount = 1; 
+var completecount = 0; 
 
 for(var i = 0; i<numtask; i++){
     tasks.push(prompt("Enter Task")); 
@@ -38,10 +38,13 @@ function buildhouse(){
             image.setAttribute("src", name);
             if (incrementer >= 27){
                 stop();
+                completecount++;
+                if(check()){
+                    win();
+                }
             }
             incrementer++;
         }
-        completecount++;
     }
     if (ranhouse === 2){ 
         var incrementer = 28;
@@ -57,10 +60,13 @@ function buildhouse(){
             image.setAttribute("src", name);
             if (incrementer >= 38){
                 stop();
+                completecount++;
+                if(check()){
+                    win();
+                }
             }
             incrementer++;
         }
-        completecount++;
     }
     if (ranhouse === 3){
         var incrementer = 39;
@@ -76,10 +82,13 @@ function buildhouse(){
             image.setAttribute("src", name);
             if (incrementer >= 49){
                 stop();
+                completecount++;
+                if(check()){
+                    win();
+                }
             }
             incrementer++;
         }
-        completecount++;
     }
 }
 
@@ -87,17 +96,13 @@ function complete() {
     var tasknum = prompt("Which task number did you complete?");
     var taskelem = document.getElementById("list-item-" + tasknum);
     taskelem.style.backgroundImage = "url('assets/CheckedBox.png')";
+    console.log(completecount);
     console.log(check());
-    if(check()){
-        console.log("Timeout TEST?!?!?!!?!?");
-        setTimeout(win(), 5000);
-    }
     buildhouse();
 }
 
 function check(){
-    console.log(completecount);
-    if(completecount === tasks.length){
+    if(completecount >= tasks.length){
         return true;
     }
     else{
@@ -112,15 +117,12 @@ function win(){
         var img = document.getElementById("thing-" + i);
         var src = img.getAttribute("src");
         if (src === "assets/first-block-27.png.png"){
-            console.log('Funny monkey');
             img.setAttribute("src", "assets/ezgif-3-887a01b628.gif")
         }
         else if (src === "assets/first-block-38.png.png"){
-            console.log('Funny monkey');
-            img.setAttribute("src", "assets/ezgif-3-32116975a.gif")
+            img.setAttribute("src", "assets/ezgif-3-321169675a.gif")
         }
         else if (src === "assets/first-block-49.png.png"){
-            console.log('Funny monkey');
             img.setAttribute("src", "assets/ezgif-3-fdbfaea6c1.gif")
         }
     } 
