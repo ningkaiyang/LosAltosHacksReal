@@ -19,7 +19,7 @@ function complete() {
     var tasknum = prompt("Which task number did you complete?");
     var taskelem = document.getElementById("list-item-" + tasknum);
     taskelem.style.backgroundImage = "url('assets/CheckedBox.png')";
-    
+    var rannum = Math.random(1,25); 
 }
 
 var doneButton = document.getElementById("task-button");
