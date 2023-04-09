@@ -119,10 +119,10 @@ function win(){
         var img = document.getElementById("thing-" + i);
         var src = img.getAttribute("src");
         if (src === "assets/first-block-27.png.png"){
-            img.setAttribute("src", "assets/ezgif-3-887a01b628.gif")
+            img.setAttribute("src", "assets/ezgif-3-321169675a.gif")
         }
         else if (src === "assets/first-block-38.png.png"){
-            img.setAttribute("src", "assets/ezgif-3-321169675a.gif")
+            img.setAttribute("src", "assets/ezgif-3-887a01b628.gif")
         }
         else if (src === "assets/first-block-49.png.png"){
             img.setAttribute("src", "assets/ezgif-3-fdbfaea6c1.gif")
